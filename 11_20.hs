@@ -101,4 +101,10 @@ slice' (x:xs) i k |k <= 1 = []
  
 *Main> rotate ['a','b','c','d','e','f','g','h'] (-2)
 "ghabcdef"
---}         
+--}      
+
+rotate :: [a] -> Int -> [a]
+rotate xs n | n > 0 = left xs n
+            | n < 0 = right xs n
+            where 
+            	left ys m  = 

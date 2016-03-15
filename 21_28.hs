@@ -60,3 +60,10 @@ rnd_permu xs = [xs !! i | i<-is]
                	   n = length xs - 1
                    is = take (n+1) . nub . randomRs(0, n) . mkStdGen $ n     
 
+{--
+26. (**) Generate the combinations of K distinct objects chosen 
+		 from the N elements of a list
+
+> combinations 3 "abcdef"
+["abc","abd","abe",...]
+--}
